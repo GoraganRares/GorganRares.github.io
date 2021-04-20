@@ -1,5 +1,5 @@
 html{
-    font-family: 'Roboto', sans-serif;
+    font-family: "Tahoma", Sans-serif;
     font-weight: 300;
 }
 
@@ -17,21 +17,29 @@ html{
 /*Section*/
 .section-block {height:calc(100vh);}
 .section-block.not-fullscreen {height: auto;}
-    
 /*Section*/
+
+/*Navigatie*/
 #header {position: fixed; z-index: 10; width: 100%;}
+    .container-fluid {padding: 0 70px;}
     .navbar {padding: 50px 0;}
         .navbar-brand {font-weight: 500; font-size: 1.5em; text-transform: uppercase; color: #fff;}
-            .navbar-brand > img {width: 200px; height: 70px;}
+            .navbar-brand > img {width: 200px; height: 50px;}
+        .soon {display: none;}
+        .construction {display: none;}
         .navbar-nav{width: 100%;}
             .nav-item {font-weight: 600; text-transform: uppercase; padding-left: 50px;}
                 .nav-link { letter-spacing: 2px; font-size: 1em; font-weight: 700; background-color: #fff;}
                 .nav-link:hover {background-color: black; color:black; border-radius: 5px; transition: all 0.6s ease 0s;}    
                 .navbar-dark .navbar-nav .nav-link {color: #212529;}
                 .dropdown-menu[data-bs-popper] {left:auto;}
+                    .dropdown-menu {min-width: 5rem; padding: 0; background-color: transparent; border: 0px}
                     #navbarDropdownMenuLink, .dropdown-item{display: flex; align-items: center;}    
+                        .dropdown-item {padding: 0.5rem 0.6rem; }
+                        .dropdown-item span {color: white; font-weight: 700;}
+                            .dropdown-item:hover {background-color: black;}
                     
-
+/*Navigatie*/
 #video {height: 100vh; width: 100%; background-color: black; display: flex; align-items: center; justify-content: center; color: #fff;}
     #video video {width: 100%; height: 100%; position: absolute; top: 1; left: 0; z-index:5; object-fit: cover;}
 
@@ -39,11 +47,13 @@ html{
         flex-grow: 0;
     }
 @media (min-width: 992px) {
+    .soon {display: block; font-size: 25px; font-weight: 800; color: #FF2E2E; margin: 0; text-align: center;}
+    .construction {display: block; color:white; font-weight: 700; font-size: 20px; text-align: center;}
     .navbar-expand-lg {flex-wrap: nowrap;justify-content: flex-end;}
     .navbar-expand-lg .navbar-collapse {flex-basis:0;}
     .nav-link {background-color: transparent;}
     .navbar-dark .navbar-nav .nav-link {color: white;}
-    .navbar-brand > img {width: 270px; height: 90px;}
+    .navbar-brand > img {width: 400px; height: 100px;}
 }
 
 
@@ -55,15 +65,17 @@ html{
     ion-icon {color: white; width: 18px; height: 17px;}
     .caption a:hover{
         box-shadow: 0 10px 36px rgba(0, 0, 0, 1);
-    }
+}
 
-.carusel-caption {display: flex; flex-direction: column; position: absolute; left: 10%; top: 30%; color: white;}
-    .carusel-caption h5 {font-size: 48px; font-weight: 900; width: 46rem;}
+
+/*Hero*/
+.carusel-caption {display: flex; flex-direction: column; position: absolute; left: 7%; top: 23%; color: white;}
+    .carusel-caption h5 {font-size: 48px; font-weight: 900; width: 46rem;font-family: Tahoma; font-size: 48px; font-style: normal; font-variant: normal; line-height: 52.8px; }
     .carusel-caption p {font-size: 40px; width: 46rem; padding-right: 0rem;}
     .carousel-image {width: auto; left: -360px; position: relative;}
 
 @media (max-width: 1658px) {
-    .carusel-caption h5 {font-size: 40px; font-weight: 900; width: 35rem;}
+    .carusel-caption h5 {font-size: 40px; width: 35rem;}
     .carusel-caption p {font-size: 30px; width: 35rem; }
 }
 
@@ -79,9 +91,8 @@ html{
 @media (min-width: 800px) {
     .carousel-image {left: 0;}
 }
-
-
 @media (min-width: 1160px) {
     .carousel-image {width: 100% !important;}
 }
-
+/*Hero*/
+    .carousel-control-next, .carousel-control-prev {width: 3%;}
