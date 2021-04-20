@@ -1,0 +1,88 @@
+html{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+/*Section*/
+.section-block {height:calc(100vh);}
+.section-block.not-fullscreen {height: auto;}
+    
+/*Section*/
+#header {position: fixed; z-index: 10; width: 100%;}
+    .navbar {padding: 50px 0;}
+        .navbar-brand {font-weight: 500; font-size: 1.5em; text-transform: uppercase; color: #fff;}
+            .navbar-brand > img {width: 200px; height: 70px;}
+        .navbar-nav{width: 100%;}
+            .nav-item {font-weight: 600; text-transform: uppercase; padding-left: 50px;}
+                .nav-link { letter-spacing: 2px; font-size: 1em; font-weight: 700; background-color: #fff;}
+                .nav-link:hover {background-color: black; color:black; border-radius: 5px; transition: all 0.6s ease 0s;}    
+                .navbar-dark .navbar-nav .nav-link {color: #212529;}
+                .dropdown-menu[data-bs-popper] {left:auto;}
+                    #navbarDropdownMenuLink, .dropdown-item{display: flex; align-items: center;}    
+                    
+.navbar-dark .navbar-toggler-icon {background-image: url(/images/square-removebg-preview.png);}
+.navbar-dark .navbar-toggler {color: transparent; border-color: transparent}
+#video {height: 100vh; width: 100%; background-color: black; display: flex; align-items: center; justify-content: center; color: #fff;}
+    #video video {width: 100%; height: 100%; position: absolute; top: 1; left: 0; z-index:5; object-fit: cover;}
+
+.navbar-collapse {
+        flex-grow: 0;
+    }
+@media (min-width: 992px) {
+    .navbar-expand-lg {flex-wrap: nowrap;justify-content: flex-end;}
+    .navbar-expand-lg .navbar-collapse {flex-basis:0;}
+    .nav-link {background-color: transparent;}
+    .navbar-dark .navbar-nav .nav-link {color: white;}
+    .navbar-brand > img {width: 270px; height: 90px;}
+}
+
+
+#video .caption {position: relative; z-index: 20; padding-left: 50px; margin-top: 30rem;}
+    .caption h1 {font-size: 26px; font-weight: 600;}
+    .caption p {font-size: 50px;font-weight: 300;}
+    .caption a {text-decoration: none; color: white; background-color: #303133; display: flex; align-items: center; justify-content: space-around; width: 200px; border-radius: 50px; padding: 13px 31px;}
+    .caption span {font-size: 1.2rem; display: inline;}
+    ion-icon {color: white; width: 18px; height: 17px;}
+    .caption a:hover{
+        box-shadow: 0 10px 36px rgba(0, 0, 0, 1);
+    }
+
+.carusel-caption {display: flex; flex-direction: column; position: absolute; left: 10%; top: 30%; color: white;}
+    .carusel-caption h5 {font-size: 48px; font-weight: 900; width: 46rem;}
+    .carusel-caption p {font-size: 40px; width: 46rem; padding-right: 0rem;}
+    .carousel-image {width: auto; left: -360px; position: relative;}
+
+@media (max-width: 1658px) {
+    .carusel-caption h5 {font-size: 40px; font-weight: 900; width: 35rem;}
+    .carusel-caption p {font-size: 30px; width: 35rem; }
+}
+
+@media (max-width: 1450px) {
+    .carusel-caption{top: 21%;}
+}
+@media (max-width: 800px) {
+    .carusel-caption {top: 35%;}
+    .carousel-image {left: -400px;}
+    .carusel-caption h5 {font-size: 25px; font-weight: 900; width: 20rem;}
+    .carusel-caption p {font-size: 15px; width: 15rem; }
+}
+@media (min-width: 800px) {
+    .carousel-image {left: 0;}
+}
+
+
+@media (min-width: 1160px) {
+    .carousel-image {width: 100% !important;}
+}
+
